@@ -58,7 +58,7 @@ main {
 }
 
 .section {
-    padding: 90px 20px 20px;
+    padding: 90px 0 20px;
     border-bottom: 1px solid #ccc;
     text-align: center;
 }
@@ -68,6 +68,15 @@ main {
     max-width: 500px;
     display: block;
     margin: 0 auto;
+}
+
+#about ul {
+    list-style-position: inside;
+    padding: 0;
+}
+
+#about li {
+    margin: 6px 0;
 }
 
 .about-content {
@@ -107,23 +116,58 @@ footer {
 }
 
 .video-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: 20px;
-    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .video-gallery iframe {
     width: 100%;
     max-width: 560px;
-    height: 315px;
+    aspect-ratio: 16 / 9;
+    border: none;
 }
 
-.testimonial {
+.video-link {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#video .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #c8102e;
+    /* or your site's accent color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#video .btn:hover,
+#video .btn:active,
+#video .btn:focus {
+    background: #a60d25;
+}
+
+.reviews {
     margin: 20px 0;
     padding: 10px 20px;
     border-left: 4px solid #333;
     background-color: #f9f9f9;
+}
+
+#contact a {
+    color: #000;
+}
+
+#contact a:hover,
+#contact a:active,
+#contact a:focus {
+    text-decoration: none;
+    color: #a60d25;
 }
 
 blockquote {
